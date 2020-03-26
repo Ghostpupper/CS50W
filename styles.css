@@ -1,0 +1,13 @@
+h1{
+  color: red;
+  text-align: center;
+}
+p {
+
+  text-align: center;
+  padding: 1px
+}
+#top {
+  border: 2px solid brown;
+  margin: 1px
+}
