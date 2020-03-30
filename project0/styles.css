@@ -1,0 +1,62 @@
+table, h1, .container {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jumbotron {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  border: 1px solid black;
+  text-align: center;
+}
+
+body {
+  background-color: #01A9DB;
+}
+
+h1 {
+  border: 1px solid black;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td, tr {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+tr th {
+  background-color: blue;
+}
+
+@media (min-width: 500px) {
+  #dogpic img {
+    width: 520px;
+    height: 500px;
+  }
+}
+@media (max-width: 499px) {
+  #dogpic img {
+    width: 310px;
+    height: 300px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

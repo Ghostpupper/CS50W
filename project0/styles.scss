@@ -1,0 +1,63 @@
+$bg-color:#01A9DB;
+$fg-color: blue;
+%basic_content{
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.jumbotron{
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.container{
+  @extend %basic_content;
+  border: 1px solid black;
+  text-align: center;
+}
+body{
+  background-color: $bg-color
+}
+h1 {
+  @extend %basic_content;
+  border: 1px solid black;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+
+}
+img{
+  display: flex;
+  flex-wrap: wrap;
+}
+table {
+  @extend %basic_content;
+    border-collapse: collapse;
+}
+
+th, td, tr{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+tr th{
+  background-color: blue;
+}
+#dogpic{
+  @media (min-width: 500px) {
+    img {
+      width: 520px;
+      height: 500px;
+     }
+  }
+  @media (max-width: 499px) {
+    img {
+      width: 310px;
+      height: 300px;
+     }
+  }
+
+
+}
