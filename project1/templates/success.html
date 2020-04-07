@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Success!
+{% endblock %}
+
+{% block body %}
+    <h1>Success!</h1>
+
+    You have successfully created a new user
+    
+    <a href="{{ url_for('index') }}">Back to login</a>
+
+{% endblock %}

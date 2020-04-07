@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome to the home page {{ name }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-dark">Welcome {{ name }}!</h1>
+    <h2>Look for a book!</h2>
+    <form action="{{ url_for('booksearch') }}" method="post">
+      <input type="text" name="search_value" placeholder="Search..">
+      <button type="submit">Go</button>
+    </form>
+    {% if results %}
+    <h2> Search Results:</h2>
+    <h6>Title, Author, Year, Isbn:</h6>
+    <ul>
+      {% for item in results %}
+        <li>
+          <a href="{{ url_for('books', book_id=item.id) }}">
+            {{ item.title }}, {{ item.author }}, {{ item.year }}, {{ item.isbn }}
+          </a>
+
+        </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if no_result %}
+    <p>No search results</p>
+    {% endif %}
+{% endblock %}

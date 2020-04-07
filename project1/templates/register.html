@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Please enter your information to register
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('registry') }}" method="post">
+        <h2>Please enter your username:</h2>
+        <input type="text" name="new_name" placeholder="Enter Your Name">
+        {% if taken_username %}
+        <div class="alert alert-warning">
+          <strong>Username already taken!</strong> Please try another username
+        </div>
+        {% endif %}
+        <h2>Please enter the password you want to use:</h2>
+        <input type="password" name="new_password" placeholder="*">
+        {% if bad_pass %}
+        <div class="alert alert-danger">
+          <strong>Invalid password format!</strong> Password needs to be at least 2 characters
+        </div>
+        {% endif %}
+        <button>Create user</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to login</a>
+{% endblock %}
