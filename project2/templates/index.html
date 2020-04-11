@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FLACK</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const h1 = document.querySelector('h1').innerHTML;
+              const phrases = ['Welcome','to','FLACK!'];
+              for (let i = 0; i < phrases.length ; i++)
+                h1 = phrases[i];
+                //h1.style.animation.
+
+            });
+        </script>
+        <style>
+          @keyframes move {
+              0% {
+                  font-size: 1px;
+                  opacity: 1;
+              }
+              75% {
+                  font-size: 50px;
+                  opacity: 1;
+              }
+              100% {
+                  font-size: 50px;
+
+              }
+          }
+          #welcomebox {
+            outline: 2px solid black;
+            height: 60px;
+          }
+          #bodybox {
+            body-sixing: content-box;
+            height: 100%;
+            margin: 10px;
+            border: 2px solid black;
+
+          }
+          h1 {
+              align-content: middle;
+              animation-name: move;
+              animation-duration: 3s;
+              animation-fill-mode: forwards;
+
+          }
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid" id="welcomebox">
+            <h1><h1/>
+        </div>
+        <div class="container-fluid" id="bodybox">
+
+        </div>
+    </body>
+</html>
